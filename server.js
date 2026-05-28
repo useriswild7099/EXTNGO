@@ -63,7 +63,7 @@ const server = http.createServer((req, res) => {
   }
 
   // ====== BLOCK KNOWN LEGACY ENDPOINTS ======
-  if (pathname.includes('/api/jobs') || pathname.endsWith('.tar')) {
+  if (pathname.includes('/api/jobs')) {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end('{"status":"blocked"}');
     return;
